@@ -9,9 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.util.Log;
 import android.app.AlertDialog;
-
-import org.w3c.dom.Text;
-
 import java.text.DecimalFormat;
 
 
@@ -23,7 +20,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void rekenaar(View v){
+    public void rekenaar(View view){
+        //Error als er niets in inputveld staat: eerst try, dan error catchen
         try {
             //Input in variabelen zetten
             EditText centvijf = (EditText) findViewById(R.id.centvijfuser);
@@ -52,7 +50,8 @@ public class MainActivity extends ActionBarActivity {
             double euro100Double = Double.parseDouble(euro100.getText().toString());
             //Rekenen aan variabelen
             double bedrag = centvijfDouble * 0.05 + centtienDouble * 0.1 + centtwintigDouble * 0.2 + centvijftigDouble * 0.5 + euro1Double + euro2Double * 2 + euro5Double * 5 + euro10Double * 10 + euro20Double * 20 + euro50Double * 50 + euro100Double * 100;
-            //Variabele naar string sturen en afronden op max 2 decimalen
+            //Variabele naar string sturen en afronden op max 2 decimalen: niet geschikt
+            // bij grote bedragen (boven ~10000)
             DecimalFormat dec = new DecimalFormat("#.00");
             String bedragText = dec.format(bedrag);
             String bedragText2 = "Er zit €" + bedragText + " in de kas";
@@ -60,8 +59,9 @@ public class MainActivity extends ActionBarActivity {
             TextView textResultaat = (TextView) findViewById(R.id.resultaat);
             textResultaat.setText(bedragText2);
         } catch(NumberFormatException exception){
+            //Stuur exception naar messageBox
             messageBox("rekenaar", exception.getMessage());
-        } //Stuur exception naar messageBox
+        }
 
 
     }
