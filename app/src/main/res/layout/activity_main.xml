@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 5-cent in"
+        android:id="@+id/centvijftext" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/centvijfuser"
+        android:layout_toRightOf="@id/centvijftext"
+        android:layout_weight="1"
+        android:text="0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voer het aantal 10-cent in"
+        android:id="@+id/centtientext"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/centvijfuser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText android:id="@+id/centtienuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_weight="1"
+        android:layout_below="@+id/centvijfuser"
+        android:layout_toRightOf="@+id/centtientext"
+        android:layout_toEndOf="@+id/centtientext"
+        android:text="0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bereken!"
+        android:id="@+id/button"
+        android:onClick="rekenaar"
+        android:layout_below="@+id/euro100user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hier komt het kasgeld te staan"
+        android:id="@+id/resultaat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 20-cent in"
+        android:id="@+id/centtwintigtext"
+        android:layout_below="@+id/centtienuser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 50-cent in"
+        android:id="@+id/centvijftigtext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/centtwintiguser"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 1-euro in"
+        android:id="@+id/euro1text"
+        android:layout_below="@+id/centvijftiguser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 2-euro in"
+        android:id="@+id/euro2text"
+        android:layout_below="@+id/euro1user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 5-euro in"
+        android:id="@+id/euro5text"
+        android:layout_below="@+id/euro2user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 10-euro in"
+        android:id="@+id/euro10text"
+        android:layout_below="@+id/euro5user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 20-euro in"
+        android:id="@+id/euro20text"
+        android:layout_below="@+id/euro10user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 50-euro in"
+        android:id="@+id/euro50text"
+        android:layout_below="@+id/euro20user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/centtwintiguser"
+        android:text="0"
+        android:layout_below="@+id/centtienuser"
+        android:layout_toRightOf="@+id/centtwintigtext"
+        android:layout_toEndOf="@+id/centtwintigtext" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/centvijftiguser"
+        android:text="0"
+        android:layout_below="@+id/centtwintiguser"
+        android:layout_toRightOf="@+id/centvijftigtext"
+        android:layout_toEndOf="@+id/centvijftigtext" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro1user"
+        android:text="0"
+        android:layout_below="@+id/centvijftiguser"
+        android:layout_toRightOf="@+id/euro1text"
+        android:layout_toEndOf="@+id/euro1text" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro2user"
+        android:text="0"
+        android:layout_below="@+id/euro1user"
+        android:layout_toRightOf="@+id/euro2text"
+        android:layout_toEndOf="@+id/euro2text" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro5user"
+        android:text="0"
+        android:layout_below="@+id/euro2user"
+        android:layout_toRightOf="@+id/euro5text"
+        android:layout_toEndOf="@+id/euro5text" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro10user"
+        android:text="0"
+        android:layout_below="@+id/euro5user"
+        android:layout_toRightOf="@+id/euro10text"
+        android:layout_toEndOf="@+id/euro10text" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro20user"
+        android:text="0"
+        android:layout_below="@+id/euro10user"
+        android:layout_toRightOf="@+id/euro20text"
+        android:layout_toEndOf="@+id/euro20text" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro50user"
+        android:text="0"
+        android:layout_below="@+id/euro20user"
+        android:layout_toRightOf="@+id/euro50text"
+        android:layout_toEndOf="@+id/euro50text" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Voer het aantal 100-euro in"
+        android:id="@+id/euro100text"
+        android:layout_below="@+id/euro50user"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/euro100user"
+        android:text="0"
+        android:layout_below="@+id/euro50user"
+        android:layout_toRightOf="@+id/euro100text"
+        android:layout_toEndOf="@+id/euro100text" />
+
+</RelativeLayout>
